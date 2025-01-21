@@ -22,6 +22,9 @@ db.primeira_collection.findOne({})
 # Exercício 01 - primeiro Desafio
 
 db.primeira_collection.insertOne({ "nome": "Ana", "idade": 18, "profissao": "Cientista de Dados" })
+
 db.primeira_collection.find()
+
 db.primeira_collection.insertOne({ "nome": "Ricardo", "idade": 49 })
+
 db.primeira_collection.find()
