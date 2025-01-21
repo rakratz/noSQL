@@ -1,0 +1,14 @@
+[
+  {
+    "_id": 101,
+    "rua": "Rua Principal",
+    "cidade": "Goiânia",
+    "estado": "GO"
+  },
+  {
+    "_id": 102,
+    "rua": "Avenida Central",
+    "cidade": "São Paulo",
+    "estado": "SP"
+  }
+]
