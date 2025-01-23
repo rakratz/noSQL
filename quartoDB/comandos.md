@@ -18,6 +18,10 @@ db.usuarios.insertMany([
 
 mongoexport --db=quartoDB --collection=usuarios --out=usuarios.json
 
+# Verifique no VS Code como foi expoirtado, repare que não gerou um Array então vamos exportar novamente
+
+mongoexport --db=quartoDB --collection=usuarios --out=usuarios.json --jsonArray
+
 # 4. Apagar o banco de dados "quartoDB" (retorne ao mongosh)
 
 db.dropDatabase()
