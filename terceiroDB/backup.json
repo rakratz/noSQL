@@ -1,0 +1,3 @@
+{"_id":{"$oid":"679161132aa6f8e44ccb0ce2"},"nome":"João"}
+{"_id":{"$oid":"679161432aa6f8e44ccb0ce3"},"nome":"João","idade":30,"profissao":"Analista de sistema"}
+{"_id":{"$oid":"679162092aa6f8e44ccb0ce4"},"nome":"Ana","idade":18,"profissao":"Cientista de Dados","faculdade":"IPOG"}

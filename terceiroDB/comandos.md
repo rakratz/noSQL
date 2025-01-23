@@ -34,7 +34,7 @@ db.dropDatabase()
 
 # Exporta a coleção "clientes" do banco de dados "primeiroDB" para um arquivo JSON
 
-mongoexport --db=primeiroDB --collection=clientes --out=clientes.json
+mongoexport --db=primeiroDB --collection=primeira_collection --out=clientes.json
 
 # --db: Nome do banco de dados.
 # --collection: Nome da coleção a ser exportada.
