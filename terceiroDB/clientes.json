@@ -1,0 +1,42 @@
+[
+  {
+    "nome": "João Silva",
+    "idade": 28,
+    "cidade": "Goiânia",
+    "email": "joao.silva@gmail.com",
+    "telefone": "62991234567",
+    "ativo": true
+  },
+  {
+    "nome": "Maria Oliveira",
+    "idade": 34,
+    "cidade": "Rio de Janeiro",
+    "email": "maria.oliveira@email.com",
+    "telefone": "21987654321",
+    "ativo": true
+  },
+  {
+    "nome": "Carlos Pereira",
+    "idade": 40,
+    "cidade": "São Paulo",
+    "email": "carlos.pereira@gmail.com",
+    "telefone": "11999887766",
+    "ativo": false
+  },
+  {
+    "nome": "Ana Costa",
+    "idade": 25,
+    "cidade": "Belo Horizonte",
+    "email": "ana.costa@hotmail.com",
+    "telefone": "31988776655",
+    "ativo": true
+  },
+  {
+    "nome": "Ricardo Souza",
+    "idade": 50,
+    "cidade": "Porto Alegre",
+    "email": "ricardo.souza@gmail.com",
+    "telefone": "51966554433",
+    "ativo": true
+  }
+]

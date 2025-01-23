@@ -1,0 +1,47 @@
+[
+  {
+    "titulo": "MongoDB: A Complete Guide",
+    "autor": "John Doe",
+    "ano_publicacao": 2021,
+    "editora": "TechBooks",
+    "generos": ["Tecnologia", "Banco de Dados"],
+    "estoque": 10,
+    "preco": 59.99
+  },
+  {
+    "titulo": "Aprendendo JavaScript",
+    "autor": "Jane Smith",
+    "ano_publicacao": 2020,
+    "editora": "CodeMasters",
+    "generos": ["Tecnologia", "Programação"],
+    "estoque": 5,
+    "preco": 45.9
+  },
+  {
+    "titulo": "Design Patterns para Desenvolvedores",
+    "autor": "Alan Turing",
+    "ano_publicacao": 2019,
+    "editora": "CodeCraft",
+    "generos": ["Programação", "Engenharia de Software"],
+    "estoque": 3,
+    "preco": 72.5
+  },
+  {
+    "titulo": "NoSQL para Iniciantes",
+    "autor": "Rachel Green",
+    "ano_publicacao": 2022,
+    "editora": "DataTech",
+    "generos": ["Tecnologia", "Banco de Dados"],
+    "estoque": 8,
+    "preco": 38.75
+  },
+  {
+    "titulo": "Estruturas de Dados Avançadas",
+    "autor": "Grace Hopper",
+    "ano_publicacao": 2021,
+    "editora": "CompuBooks",
+    "generos": ["Algoritmos", "Programação"],
+    "estoque": 4,
+    "preco": 65.3
+  }
+]
