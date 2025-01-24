@@ -1,0 +1,21 @@
+{
+  "_id": "RA123456789",
+  "nome": "Maria Oliveira",
+  "email": "maria.oliveira@email.com",
+  "telefone": "11987654321",
+  "emprestimos": [
+    {
+      "id": "EMP001",
+      "dataEmprestimo": "2025-01-20",
+      "dataDevolucao": "2025-02-20",
+      "livro": {
+        "isbn": "9781234567890",
+        "nome": "Introdução ao MongoDB"
+      },
+      "colaborador": {
+        "cpf": "CPF12345678900",
+        "nome": "Carlos Pereira"
+      }
+    }
+  ]
+}

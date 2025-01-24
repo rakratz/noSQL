@@ -1,0 +1,21 @@
+[
+  {
+    "_id": 1,
+    "nome": "Loja A",
+    "endereco": {
+      "rua": "Rua Principal",
+      "cidade": "Goiânia",
+      "estado": "GO"
+    }
+  },
+  {
+    "_id": 2,
+    "nome": "Loja B",
+    "endereco": {
+      "rua": "Avenida Central",
+      "cidade": "São Paulo",
+      "estado": "SP"
+    }
+  }
+]
+

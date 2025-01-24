@@ -10,7 +10,6 @@ db.segunda_collection.insertOne({ nome:"Paulo", idade: 25, sexo: "M"})
 
 db.segunda_collection.find().pretty()
 
-#
 
 # Vídeo Aula 09
 

@@ -1,0 +1,21 @@
+{
+  "usuario": {
+    "id": 123,
+    "nome": "Ana",
+    "email": "ana@example.com"
+  },
+  "pedidos": [
+    {
+      "id": 1,
+      "data": "2025-01-19",
+      "valor": 120.5
+    },
+    {
+      "id": 2,
+      "data": "2025-01-18",
+      "valor": 89.9
+    }
+  ]
+}
+
+

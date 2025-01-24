@@ -1,0 +1,9 @@
+{
+  "nome": "João",
+  "idade": 30,
+  "profissao": "Análista de Sistema"
+}
+
+
+
+db.clientes.insertOne({ nome: "Lucas", idade: 29, cidade: "Curitiba" })

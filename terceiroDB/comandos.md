@@ -36,20 +36,22 @@ db.dropDatabase()
 
 mongoexport --db=primeiroDB --collection=primeira_collection --out=clientes.json
 
-# --db: Nome do banco de dados.
-# --collection: Nome da coleção a ser exportada.
-# --out: Nome do arquivo de saída.
-# Saída esperada: Um arquivo clientes.json contendo os dados da coleção será gerado no diretório atual.
+--db: Nome do banco de dados.
+--collection: Nome da coleção a ser exportada.
+--out: Nome do arquivo de saída.
+
+Saída esperada: Um arquivo clientes.json contendo os dados da coleção será gerado no diretório atual.
 
 # Importa os dados do arquivo "livros.json" para a coleção "livros" no banco "primeiroDB" 
 
 mongoimport --db=primeiroDB --collection=livros --file=livros.json --jsonArray
 
-# --db=primeiroDB: Nome do banco de dados onde os dados serão importados.
-# --collection=livros: Nome da coleção que será criada ou onde os dados serão adicionados.
-# --file=livros.json: Caminho para o arquivo JSON.
-# --jsonArray: Indica que o arquivo está em formato de array JSON.
+--db=primeiroDB: Nome do banco de dados onde os dados serão importados.
+--collection=livros: Nome da coleção que será criada ou onde os dados serão adicionados.
+--file=livros.json: Caminho para o arquivo JSON.
+--jsonArray: Indica que o arquivo está em formato de array JSON.
 
+# Comandos de Verificação
 use primeiroDB
 
 cls
