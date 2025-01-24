@@ -1,24 +1,28 @@
 # Aula 16
 
 // 1. Atualizar o telefone do colaborador
+
 db.colaboradores.updateOne(
   { _id: "CPF12345678900" },
   { $set: { telefone: "11987654321" } }
 );
 
 // 2. Incrementar o estoque do livro
+
 db.livros.updateOne(
   { _id: "9786543219870" },
   { $inc: { estoque: 10 } }
 );
 
 // 3. Alterar a dataDevolucao de um empréstimo
+
 db.emprestimos.updateOne(
   { _id: "EMP001" },
   { $set: { dataDevolucao: new Date("2025-02-15") } }
 );
 
 // 4. Renomear o campo telefone para contato
+
 db.alunos.updateMany(
   {},
   { $rename: { telefone: "contato" } }
@@ -26,16 +30,21 @@ db.alunos.updateMany(
 
 
 // 1. Remover um único empréstimo
+
 db.emprestimos.deleteOne({ _id: "EMP001" })
 
 // 2. Excluir todos os colaboradores com o cargo "Assistente"
+
 db.colaboradores.deleteMany({ cargo: "Assistente" })
 
 // 3. Limpar a coleção de empréstimos sem remover a coleção
+
 db.emprestimos.deleteMany({})
 
 // 4. Excluir o banco de dados biblioteca
+
 use biblioteca
+
 db.dropDatabase()
 
 # Estrutura de Dados
