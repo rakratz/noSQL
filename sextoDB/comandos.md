@@ -1,28 +1,24 @@
 # Aula 16
 
 // 1. Atualizar o telefone do colaborador
-
 db.colaboradores.updateOne(
   { _id: "CPF12345678900" },
   { $set: { telefone: "11987654321" } }
 );
 
 // 2. Incrementar o estoque do livro
-
 db.livros.updateOne(
   { _id: "9786543219870" },
   { $inc: { estoque: 10 } }
 );
 
 // 3. Alterar a dataDevolucao de um empréstimo
-
 db.emprestimos.updateOne(
   { _id: "EMP001" },
   { $set: { dataDevolucao: new Date("2025-02-15") } }
 );
 
 // 4. Renomear o campo telefone para contato
-
 db.alunos.updateMany(
   {},
   { $rename: { telefone: "contato" } }
@@ -30,21 +26,16 @@ db.alunos.updateMany(
 
 
 // 1. Remover um único empréstimo
-
 db.emprestimos.deleteOne({ _id: "EMP001" })
 
 // 2. Excluir todos os colaboradores com o cargo "Assistente"
-
 db.colaboradores.deleteMany({ cargo: "Assistente" })
 
 // 3. Limpar a coleção de empréstimos sem remover a coleção
-
 db.emprestimos.deleteMany({})
 
 // 4. Excluir o banco de dados biblioteca
-
 use biblioteca
-
 db.dropDatabase()
 
 # Estrutura de Dados
@@ -124,3 +115,71 @@ db.pedidos.insertOne({
   ]
 }
 
+# Aula 17
+
+// Buscar pedidos com total igual a 3800.5
+
+db.pedidos.find({ total: { $eq: 3800.5 } }).pretty()
+
+// Buscar pedidos com total maior que 3000
+
+db.pedidos.find({ total: { $gt: 3000 } }).pretty()
+
+// Buscar pedidos com total menor que 4000
+
+db.pedidos.find({ total: { $lt: 4000 } }).pretty()
+
+// Buscar pedidos com total maior que 3000 e entrega não realizada
+
+db.pedidos.find({
+  $and: [
+    { total: { $gt: 3000 } },
+    { entregaRealizada: false }
+  ]
+}).pretty()
+
+// Buscar pedidos com total maior que 4000 ou entrega realizada
+
+db.pedidos.find({
+  $or: [
+    { total: { $gt: 4000 } },
+    { entregaRealizada: true }
+  ]
+}).pretty()
+
+// Buscar pedidos onde o total não seja 3800.5
+
+db.pedidos.find({
+  total: { $not: { $eq: 3800.5 } }
+}).pretty()
+
+// Buscar pedidos onde os produtos incluem ambos "Notebook Dell" e "Mouse 
+Logitech"
+db.pedidos.find({
+  "produtos.nome": { $all: ["Notebook Dell", "Mouse Logitech"] }
+}).pretty()
+
+// Buscar pedidos que contenham "Mouse Logitech" com quantidade maior que 1
+
+db.pedidos.find({
+  produtos: {
+    $elemMatch: {
+      nome: "Mouse Logitech",
+      quantidade: { $gt: 1 }
+    }
+  }
+}).pretty()
+
+// Buscar pedidos com exatamente 2 produtos
+
+db.pedidos.find({
+  produtos: { $size: 2 }
+}).pretty()
+
+// Buscar pedidos onde o campo enderecoEntrega existe
+
+db.pedidos.find({ enderecoEntrega: { $exists: true } }).pretty()
+
+// Buscar pedidos onde o campo total é do tipo double
+
+db.pedidos.find({ total: { $type: "double" } }).pretty()
