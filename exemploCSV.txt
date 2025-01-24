@@ -1,0 +1,15 @@
+Curso,Descrição,Duração (Horas),Preço (R$),Nível,Início
+Desenvolvimento Web Completo,HTML, CSS, JavaScript e backend com Node.js,120,1499,Iniciante,2025-02-01
+Python para Data Science,Manipulação e análise de dados com Python,60,899,Intermediário,2025-03-10
+Banco de Dados com SQL,Consulta e modelagem de bancos de dados relacionais,80,999,Iniciante,2025-04-15
+DevOps e CI/CD,Automação de pipelines e práticas de DevOps,100,1599,Avançado,2025-05-05
+Cybersegurança,Fundamentos de segurança da informação,50,799,Intermediário,2025-06-20
+Machine Learning com Python,Introdução a algoritmos e modelos de ML,90,1299,Avançado,2025-07-01
+Introdução à Computação,Fundamentos de lógica e programação,40,499,Iniciante,2025-01-25
+Administração de Redes,Configuração e monitoramento de redes,70,1199,Intermediário,2025-08-15
+
+
+
+
+
+
