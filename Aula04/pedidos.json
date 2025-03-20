@@ -1,0 +1,20 @@
+[
+ {
+  "cliente_id": "cliente_001",
+  "itens": [
+    {"produto": "Pizza de Calabresa", "quantidade": 1, "preco": 30.00},
+    {"produto": "Pizza de Queijo", "quantidade": 2, "preco": 25.00}
+  ],
+  "status": "em preparo",
+  "data": "2020-05-20T20:00:00Z"
+}, 
+{
+    "cliente_id": "cliente_002",
+    "itens": [
+      {"produto": "Pizza de Queijo", "quantidade": 1, "preco": 18.90},
+      {"produto": "Refrigerante", "quantidade": 2, "preco": 10.00}
+    ],
+    "status": "em preparo",
+    "data": "2020-05-19T20:00:00Z"
+  }
+]

@@ -1,0 +1,44 @@
+{
+    "id": 1,
+    "nome": "João Silva",
+    "email": "joao.silva@example.com",
+    "telefone": "(11) 98765-4321",
+    "endereco": {
+        "rua": "Rua das Flores",
+        "numero": 123,
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "01001-000"
+    },
+    "pedidos": [
+        {
+            "id_pedido": 101,
+            "data": "2025-02-01",
+            "valor_total": 150.75,
+            "itens": [
+                {
+                    "produto": "Camisa",
+                    "quantidade": 2,
+                    "preco_unitario": 50.00
+                },
+                {
+                    "produto": "Calça",
+                    "quantidade": 1,
+                    "preco_unitario": 50.75
+                }
+            ]
+        },
+        {
+            "id_pedido": 102,
+            "data": "2025-02-15",
+            "valor_total": 200.00,
+            "itens": [
+                {
+                    "produto": "Tênis",
+                    "quantidade": 1,
+                    "preco_unitario": 200.00
+                }
+            ]
+        }
+    ]
+}

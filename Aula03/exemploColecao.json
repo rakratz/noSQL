@@ -1,0 +1,22 @@
+{
+    _id: ObjectId("5f8b8f3f9f9d3a2f3c4e2f3c") // id gerado automaticamente
+    nome: "João Silva",                       // tipo string
+    idade: 30,                               // tipo inteiro (int)
+    altura: 1.75,                            // tipo decimal (double)
+    casado: false,                           // tipo booleano (bool)
+    interesses: ["cinema", "esportes"],       // tipo array de strings
+    data_nascimento: ISODate("1990-01-01"),  // tipo data
+    endereco: {                               // tipo documento
+        rua: "Rua das Flores",
+        numero: 123,
+        cidade: "Goiânia",
+        estado: "Go",
+        cep: "01001-000"
+    },
+    ultima_compra: null,                     // tipo nulo (null)
+    localizacao: {                            // tipo GeoJSON
+        type: "Point",
+        coordinates: [-46.57421, -21.785741]
+    },
+    idetificador: UUID("f47ac10b-58cc-4372-a567-0e02b2c3d479") // tipo UUID
+}

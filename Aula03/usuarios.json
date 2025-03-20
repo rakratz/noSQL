@@ -1,0 +1,21 @@
+{   
+    _id: ObjectId(),
+    nome: "João Silva",                       
+    idade: 30,                               
+    altura: 1.75,                            
+    casado: false,                           
+    interesses: ["cinema", "esportes"],       
+    data_nascimento: ISODate("1990-01-01"),  
+    endereco: {                               
+        numero: 123,
+        cidade: "Goiânia",
+        estado: "Go",
+        cep: "01001-000"
+    },
+    ultima_compra: null,                     
+    localizacao: {                           
+        type: "Point",
+        coordinates: [-46.57421, -21.785741]
+    },
+    idetificador: UUID()
+}

@@ -1,0 +1,9 @@
+{
+    "cliente": "Ricardo Kratz",
+    "itens": [
+      {"produto": "Pizza de Peperoni", "quantidade": 1, "preco": 35.00},
+      {"produto": "Suco", "quantidade": 2, "preco": 10.00}
+    ],
+    "status": "em preparo",
+    "data": "2020-05-20T20:00:00Z"
+  }

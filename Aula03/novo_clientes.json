@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "nome": "João Silva",
+        "email": "joao.silva@example.com",
+        "telefone": "(11) 98765-4321",
+        "endereco": {
+            "rua": "Rua das Flores",
+            "numero": 123,
+            "cidade": "São Paulo",
+            "estado": "SP",
+            "cep": "01001-000"
+        },
+        "pedidos": [101, 102]
+    }
+]

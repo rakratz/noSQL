@@ -1,0 +1,33 @@
+[{
+    "_id": "cliente_001",
+    "nome": "Ana Souza",
+    "idade": 30,
+    "email": "ana@email.com",
+    "telefone": "1999999999",
+    "sexo": "F",
+    "endereco": {
+        "rua": "Rua das Flores",
+        "numero": 100,
+        "bairro": "Jardim das Rosas",
+        "cidade": "Goiânia",
+        "estado": "GO"
+    },
+    "date_registro": new Date()
+},
+{
+    "_id": "cliente_002",
+    "nome": "Ricardo Kratz",
+    "idade": 49,
+    "email": "ricardo@email.com",
+    "telefone": "2999999999",
+    "sexo": "M",
+    "endereco": {
+        "rua": "Rua das Torres",
+        "numero": 500,
+        "bairro": "Jardim das Central",
+        "cidade": "Goiânia",
+        "estado": "GO"
+    },
+    "date_registro": new Date()
+}
+]
