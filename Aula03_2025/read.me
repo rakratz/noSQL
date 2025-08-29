@@ -1,0 +1,283 @@
+# Comandos da Aula
+// Abrir o Shell do MongoDB
+cmd ou powershel ou cmder
+
+''
+mongosh
+show databases
+
+
+// Limpar o Banco de dados
+    db.atendimentos.drop();
+    db.alunos.drop();
+    db.professores.drop();
+
+show collections
+
+// Sistema de CRM Simples de Alunos do IPOG
+
+
+## Explicações da Prática
+
+### CRUD
+
+Criar um nova banco: use <novo_banco>
+
+(C)reate - Insere novos documento em um coleção
+    insertOne e insertMany 
+
+db.alunos.insertOne({
+  _id: ObjectId("66e7b0000000000000000001"),
+  nome: "Ana Souza",
+  email: "ana.souza@gmail.com",
+  curso: "Redes de Computadores",
+  turma: "A",
+  enderecos: [
+    {
+      tipo: "residencial",
+      logradouro: "Rua 10",
+      numero: 10,
+      complemento: "Casa 10",
+      bairro: "Centro",
+      cidade: "Goiânia",
+      estado: "GO",
+      cep: "74010-010"
+    },
+    {
+      tipo: "trabalho",
+      logradouro: "Av. Goiás",
+      numero: 1,
+      complemento: "Casa 1",
+      bairro: "Centro",
+      cidade: "Goiânia",
+      estado: "GO",
+      cep: "74010-010"
+    }
+  ]
+});
+
+
+db.alunos.insertMany([
+  {
+    _id: ObjectId("66e7b0000000000000000002"),
+    nome: "João Silva",
+    email: "joao.silva@email.com",
+    curso: "Sistemas de Informação",
+    turma: "B",
+    enderecos: [
+      {
+        tipo: "residencial",
+        logradouro: "Rua das Flores",
+        numero: 123,
+        complemento: "Apartamento 45",
+        bairro: "Jardim América",
+        cidade: "São Paulo",
+        estado: "SP",
+        cep: "01000-000"
+      }
+    ]
+  },
+  {
+    _id: ObjectId("66e7b0000000000000000003"),
+    nome: "Maria Oliveira",
+    email: "maria.oliveira@email.com",
+    curso: "Engenharia de Software",
+    turma: "C",
+    enderecos: [
+      {
+        tipo: "residencial",
+        logradouro: "Avenida Brasil",
+        numero: 456,
+        complemento: "Bloco A, Casa 1",
+        bairro: "Centro",
+        cidade: "Rio de Janeiro",
+        estado: "RJ",
+        cep: "20000-000"
+      },
+      {
+        tipo: "trabalho",
+        logradouro: "Rua Sete de Setembro",
+        numero: 789,
+        complemento: null,
+        bairro: "Centro",
+        cidade: "Niterói",
+        estado: "RJ",
+        cep: "24000-000"
+      }
+    ]
+  }
+]);
+
+db.professores.insertOne({
+  _id: ObjectId("66e7c0000000000000000001"),
+  nome: "Ricardo Kratz",
+  email: "rakratz@gmail.com",
+  area: "Banco de Dados",
+  titulacao: "Mestre",
+  telefone: "+55 62 9999-0001",
+  status: "ativo",
+  enderecos: [
+    {
+      tipo: "residencial",
+      logradouro: "Rua 20",
+      numero: 20,
+      complemento: "Casa 20",
+      bairro: "Centro",
+      cidade: "Goiânia",
+      estado: "GO",
+      cep: "74020-020"
+    },
+    {
+      tipo: "trabalho",
+      logradouro: "Av. Goiás Norte",
+      numero: 20,
+      complemento: "Casa 20",
+      bairro: "Centro",
+      cidade: "Goiânia",
+      estado: "GO",
+      cep: "74020-020"
+    }
+  ]
+});
+
+db.professores.insertMany([
+  {
+    _id: ObjectId("66e7c0000000000000000002"),
+    nome: "Huber Lima",
+    email: "huber.lima@email.com",
+    area: "Sistemas Operacionais",
+    titulacao: "Doutor",
+    telefone: "+55 62 9999-1111",
+    status: "ativo",
+    enderecos: [
+      {
+        tipo: "residencial",
+        logradouro: "Rua 50",
+        numero: 50,
+        complemento: null,
+        bairro: "Setor Sul",
+        cidade: "Goiânia",
+        estado: "GO",
+        cep: "74000-050"
+      }
+    ]
+  },
+  {
+    _id: ObjectId("66e7c0000000000000000003"),
+    nome: "Joelma",
+    email: "joelma@email.com",
+    area: "Redes de Computadores",
+    titulacao: "Especialista",
+    telefone: "+55 62 9999-2222",
+    status: "ativo",
+    enderecos: [
+      {
+        tipo: "residencial",
+        logradouro: "Avenida Portugal",
+        numero: 100,
+        complemento: "Apartamento 101",
+        bairro: "Jardim Atlântico",
+        cidade: "Goiânia",
+        estado: "GO",
+        cep: "74000-100"
+      },
+      {
+        tipo: "trabalho",
+        logradouro: "Av. do Contorno",
+        numero: 200,
+        complemento: "Sala 20",
+        bairro: "Marista",
+        cidade: "Goiânia",
+        estado: "GO",
+        cep: "74000-200"
+      }
+    ]
+  }
+]);
+
+
+db.atendimentos.insertOne({
+    _id: ObjectId("66e7d0000000000000000001"),
+    professor_id: ObjectId("66e7c0000000000000000001"),
+    aluno_id: ObjectId("66e7b0000000000000000001"),
+    data: new Date("2025-08-28T15:00:00Z"),
+    canal: "AVA", 
+    assunto: "Mensagem no AVA - dúvidas sobre Banco de Dados",
+    descricao: "A aluna enviou uma mensagem pelo AVA solicitando esclarecimento sobre índices no MongoDB.",
+    status: "aberto",
+    historico: [
+        {
+            data: new Date("2025-08-28T15:05:00Z"),
+            nota: "Professor recebeu a mensagem e irá responder até o final da semana.",
+            autor_tipo: "professor"
+        }
+    ]
+});
+
+(R)ead - Consulta documentos existentes
+    find e findOne
+    // Filtos
+    aggregate
+        $lookup
+    
+db.atendimentos.aggregate([
+    {
+        $lookup: {
+            from: "professores",
+            localField: "professor_id",
+            foreignField: "_id",
+            as: "professor"
+        }    
+    },
+    {
+        $lookup: {
+            from: "alunos",
+            localField: "aluno_id",
+            foreignField: "_id",
+            as: "aluno"
+        }    
+    },
+    {
+        $project: {
+            _id: 1,
+            data: 1,
+            canal: 1,
+            descricao: 1,
+            status: 1,
+            professor_nome: "$professor.nome",
+            aluno_nome: "$aluno.nome"
+        }
+    }
+    
+]);
+
+(U)pdade - Altera informações de documentos
+    updateOne e updateMany
+
+   // $Set
+
+   db.alunos.updateOne(
+    { nome: "Ana Souza" },
+    { $set: { curso: "ADS"} }
+    );
+
+
+   db.professores.updateOne(
+    { nome: "Huber Lima" },
+    { $set: { nome: "Heuber Lima"} }
+    );
+
+    db.alunos.updateMany(
+        {},
+        {$ set: {status: "ativo"}}
+    );
+
+(D)elete - Remove documentos
+    deleteOne e deleteMany
+
+    db.alunos.deleteMany(
+        {turma:"B"}
+    );
+
+    db.professores.deleteOne({_id: ObjectId("66e7c0000000000000000003")});
+    
